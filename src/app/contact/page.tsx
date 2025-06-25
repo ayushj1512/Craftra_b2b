@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -13,22 +14,30 @@ export default function ContactPage() {
     message: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://craftra-backend.onrender.com/api/queries', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(formData),
       });
 
       if (res.ok) {
-        alert('Query submitted successfully!');
+        toast.success('Query submitted successfully!');
         setFormData({
           name: '',
           phoneNumber: '',
@@ -39,16 +48,32 @@ export default function ContactPage() {
           message: '',
         });
       } else {
-        alert('Failed to submit query.');
+        const errorData = await res.json();
+        toast.error(errorData.message || 'Failed to submit query.');
       }
     } catch (err) {
       console.error(err);
-      alert('An error occurred. Please try again.');
+      toast.error('An error occurred. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <>
+      <Toaster
+        position="bottom-center"
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: '#fff',
+            color: '#000',
+            fontSize: '14px',
+            boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+          },
+        }}
+      />
+
       {/* Top Header */}
       <section className="bg-blue-100 py-8 px-4 text-center font-mont">
         <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Contact Us</h1>
@@ -161,9 +186,13 @@ export default function ContactPage() {
             <div className="col-span-1 sm:col-span-2 text-center mt-4">
               <button
                 type="submit"
-                className="bg-blue-200 text-black font-semibold px-6 py-2 rounded hover:bg-blue-300 transition duration-300 text-sm"
+                disabled={loading}
+                className={`bg-blue-200 text-black font-semibold px-6 py-2 rounded transition duration-300 text-sm ${loading
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'hover:bg-blue-300'
+                  }`}
               >
-                Submit Query
+                {loading ? 'Submitting...' : 'Submit Query'}
               </button>
             </div>
           </form>
