@@ -15,8 +15,8 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Title & Breadcrumb */}
-      <section className="bg-blue-100 py-8 text-center font-mont">
-        <h1 className="text-2xl font-bold text-gray-800">About Us</h1>
+      <section className="bg-blue-100 py-8 px-4 text-center font-mont">
+        <h1 className="text-xl md:text-2xl font-bold text-gray-800">About Us</h1>
         <div className="mt-1 text-gray-600 text-sm">
           <span className="text-gray-800 font-medium">Home</span>
           <span className="mx-1">/</span>
@@ -24,9 +24,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Redefining Stationery Supply Section */}
-      <section className="py-12 bg-white font-mont px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Redefining Stationery Supply */}
+      <section className="py-12 bg-white px-4 font-mont">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
             Redefining Stationery Supply for Businesses
           </h2>
@@ -36,7 +36,7 @@ export default function AboutPage() {
             and seamless service, we help streamline your procurement process and reduce operational load.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
               {
                 title: 'Our Mission',
@@ -54,11 +54,11 @@ export default function AboutPage() {
                 text: 'Integrity, innovation, customer-centricity, and reliability guide our every delivery and service.',
               }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white shadow-md rounded-lg p-4 text-left border border-gray-100 text-sm">
+              <div key={idx} className="bg-white shadow-sm rounded-lg p-4 border border-gray-100 text-left text-sm">
                 <div className="text-blue-300 mb-3">
                   <item.icon className="w-8 h-8" />
                 </div>
-                <h3 className="text-base font-semibold mb-1 text-gray-800">{item.title}</h3>
+                <h3 className="text-base font-semibold text-gray-800 mb-1">{item.title}</h3>
                 <p className="text-gray-600">{item.text}</p>
               </div>
             ))}
@@ -68,7 +68,7 @@ export default function AboutPage() {
 
       {/* Why Get Wholesale Stationery Online */}
       <section className="py-16 px-4 bg-gray-50 font-mont">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
             Why Get Wholesale Stationery Online?
           </h2>
@@ -76,7 +76,7 @@ export default function AboutPage() {
             If you are a business in need of stationery stock, there are great benefits to using our supplier service.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left text-sm">
             {[
               { icon: ClipboardDocumentCheckIcon, text: "Bulk online orders often come with exclusive discounts, minimizing procurement expenses." },
               { icon: TruckIcon, text: "Our streamlined platform offers easy browsing, selection, and swift delivery." },
@@ -85,7 +85,7 @@ export default function AboutPage() {
               { icon: Cog6ToothIcon, text: "Bulk orders reduce the need for storage, optimizing space and operations." },
               { icon: UserIcon, text: "Online procurement reduces physical visits and saves time." },
             ].map((item, idx) => (
-              <div key={idx} className="bg-white shadow-md rounded-lg p-4 border border-gray-100">
+              <div key={idx} className="bg-white shadow-sm rounded-lg p-4 border border-gray-100">
                 <item.icon className="w-8 h-8 text-blue-300 mb-3" />
                 <p className="text-gray-700">{item.text}</p>
               </div>
@@ -94,9 +94,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* When It Comes to Stationery, We Lead the Way */}
-      <section className="bg-gray-100 py-14 font-mont px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Stats & Final CTA */}
+      <section className="bg-gray-100 py-14 px-4 font-mont">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-10">
             When It Comes to Stationery We Lead the Way
           </h2>
@@ -108,14 +108,14 @@ export default function AboutPage() {
               { stat: "2000+", label: "Stationery Products" },
               { stat: "24/7", label: "Customer Support" },
             ].map((item, idx) => (
-              <div key={idx} className="bg-blue-100 text-black rounded-lg py-6 px-3 shadow">
+              <div key={idx} className="bg-blue-100 text-black rounded-lg py-6 px-3 shadow-sm">
                 <h3 className="text-xl font-bold mb-1">{item.stat}</h3>
                 <p className="leading-snug">{item.label}</p>
               </div>
             ))}
           </div>
 
-          <div className="max-w-xl mx-auto text-sm">
+          <div className="max-w-xl mx-auto text-sm px-2 sm:px-0">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
               You Know Our Story - Get To Know the Experience!
             </h3>
