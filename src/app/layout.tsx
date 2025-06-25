@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* WhatsApp Floating Button */}
         <a
-          href="https://wa.me/919999999999" // Replace with your WhatsApp number
+          href="https://wa.me/+919582834877" // Replace with your WhatsApp number
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg"

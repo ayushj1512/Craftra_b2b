@@ -10,39 +10,7 @@ export default function Home() {
       {/* Hero Banner */}
       <HeroSection />
 
-      {/* Procurement Feature Section */}
-      <section className="py-10 px-4 bg-[#eceef6]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-6">
-            Effortless Online Procurement for Your Business Needs
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Image */}
-            <div className="flex justify-center">
-              <img
-                src="https://i.pinimg.com/originals/bf/b5/44/bfb544abc3203a6e3cea4dfdcc5bd573.gif"
-                alt="Procurement Illustration"
-                className="w-full max-w-md sm:max-w-lg rounded-xl"
-              />
-            </div>
-
-            {/* Info Boxes */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { text: "With wholesale stationery suppliers online, businesses can unlock substantial cost savings, gaining access to quality stationery at competitive prices.", bg: "bg-blue-100" },
-                { text: "Streamline procurement processes with the ease of online ordering, saving valuable time for businesses focused on core operations.", bg: "bg-white" },
-                { text: "Request from a vast array of stationery products, ensuring businesses have access to a comprehensive selection tailored to their specific needs.", bg: "bg-white" },
-                { text: "Benefit from streamlined inventory tracking, ensuring optimal stock levels and reducing administrative burdens.", bg: "bg-blue-100" },
-              ].map((item, idx) => (
-                <div key={idx} className={`${item.bg} p-4 rounded-xl text-sm text-gray-800 shadow-sm`}>
-                  {item.text}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Why Choose Us */}
       <section className="bg-blue-100 py-14 px-4">

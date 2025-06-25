@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { MdPhone, MdLocationOn, MdEmail } from 'react-icons/md';
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -78,12 +80,43 @@ export default function ContactPage() {
       {/* Top Header */}
       <section className="bg-blue-100 py-8 px-4 text-center font-mont">
         <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Contact Us</h1>
+
+        {/* Breadcrumb */}
         <div className="mt-1 text-gray-600 text-sm">
           <span className="text-gray-800 font-medium">Home</span>
           <span className="mx-1">/</span>
           <span>Contact Us</span>
         </div>
+
+        {/* Contact Info Line with Icons */}
+        <div className="mt-4 text-gray-700 text-sm sm:text-base flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-center">
+          <span className="flex items-center gap-1">
+            <MdPhone className="text-blue-800" />
+            +91 9582834877
+          </span>
+          <span>|</span>
+          <span className="flex items-center gap-1">
+            <MdPhone className="text-blue-800" />
+            011-41734340
+          </span>
+          <span>|</span>
+          <span className="flex items-center gap-1">
+            <MdLocationOn className="text-blue-800" />
+            4350/59, Padam Singh Rd, Karol Bagh, New Delhi - 110005
+          </span>
+          <span>|</span>
+          <span className="flex items-center gap-1">
+            <MdEmail className="text-blue-800" />
+            <a
+              href="mailto:newlakshmistore96@gmail.com"
+              className="text-blue-800 hover:underline"
+            >
+              newlakshmistore96@gmail.com
+            </a>
+          </span>
+        </div>
       </section>
+
 
       {/* Form Section */}
       <section className="bg-white py-10 px-4 font-mont">
