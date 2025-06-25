@@ -37,7 +37,8 @@ export default function ContactPage() {
       });
 
       if (res.ok) {
-        toast.success('Query submitted successfully!');
+        toast.success('Query submitted successfully!', { position: 'top-center' });
+        ;
         setFormData({
           name: '',
           phoneNumber: '',
