@@ -1,6 +1,8 @@
 import Header from './components/header';
 import Footer from './components/footer';
+import GATracker from './components/GATracker'; // ✅ route tracking component
 import { Toaster } from 'react-hot-toast';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'NewLakshmiStore',
@@ -13,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script src="https://cdn.tailwindcss.com"></script>
 
-        {/* Extend Tailwind for Montserrat */}
+        {/* Tailwind + Montserrat config */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -36,18 +38,35 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
+
+        {/* ✅ Google Analytics Scripts */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2MB3E5Q5K8"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2MB3E5Q5K8');
+            `,
+          }}
+        />
       </head>
       <body className="font-mont">
         <Header />
+        <GATracker /> {/* ✅ Tracks route changes */}
         <main>{children}</main>
         <Footer />
-
-        {/* Global Toast Notifications */}
         <Toaster position="top-center" />
 
         {/* WhatsApp Floating Button */}
         <a
-          href="https://wa.me/+919582834877" // Replace with your WhatsApp number
+          href="https://wa.me/+919582834877"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg"
