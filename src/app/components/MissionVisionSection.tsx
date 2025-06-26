@@ -4,7 +4,7 @@ import { ClipboardDocumentCheckIcon, EyeIcon } from '@heroicons/react/24/outline
 import { useTheme } from '@/context/ThemeContext'; // Adjust the path based on your structure
 
 export default function MissionVisionSection() {
-  const { primary, accent1, accent2, accent3 } = useTheme();
+  const { primary, accent2, accent3 } = useTheme();
 
   return (
     <section className="w-full bg-white  px-4 md:px-8 py-20">
