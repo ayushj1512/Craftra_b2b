@@ -3,7 +3,6 @@
 import HeroSection from "./components/HeroSection";
 import Link from "next/link";
 import { useTheme } from "@/context/ThemeContext";
-import { Truck, BadgeCheck } from "lucide-react";
 
 export default function Home() {
   const { primary, accent1, accent2 } = useTheme();
