@@ -9,7 +9,7 @@ export default function GATracker() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const url = pathname + searchParams.toString();
+    const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '');
     gtag.pageview(url);
   }, [pathname, searchParams]);
 
