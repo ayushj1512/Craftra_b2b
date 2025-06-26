@@ -1,5 +1,7 @@
 import Header from './components/header';
 import Footer from './components/footer';
+import { Suspense } from "react";
+
 import GATracker from './components/GATracker'; // ✅ route tracking component
 import { Toaster } from 'react-hot-toast';
 import Script from 'next/script';
@@ -59,7 +61,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="font-mont">
         <Header />
-        <GATracker /> {/* ✅ Tracks route changes */}
+        <Suspense fallback={null}>
+          <GATracker />
+        </Suspense>
         <main>{children}</main>
         <Footer />
         <Toaster position="top-center" />
