@@ -3,9 +3,12 @@
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { MdPhone, MdLocationOn, MdEmail } from 'react-icons/md';
-
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function ContactPage() {
+  const { primary, accent1 } = useTheme();
+
   const [formData, setFormData] = useState({
     name: '',
     phoneNumber: '',
@@ -39,8 +42,7 @@ export default function ContactPage() {
       });
 
       if (res.ok) {
-        toast.success('Query submitted successfully!', { position: 'top-center' });
-        ;
+        toast.success('Query submitted successfully!');
         setFormData({
           name: '',
           phoneNumber: '',
@@ -77,19 +79,18 @@ export default function ContactPage() {
         }}
       />
 
-      {/* Top Header */}
+      {/* Header Section */}
       <section className="bg-blue-100 py-8 px-4 text-center font-mont">
         <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Contact Us</h1>
 
-        {/* Breadcrumb */}
         <div className="mt-1 text-gray-600 text-sm">
           <span className="text-gray-800 font-medium">Home</span>
           <span className="mx-1">/</span>
           <span>Contact Us</span>
         </div>
 
-        {/* Contact Info Line with Icons */}
-        <div className="mt-4 text-gray-700 text-sm sm:text-base flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-center">
+        {/* Contact Info */}
+        <div className="mt-4 text-gray-700 text-sm sm:text-base flex flex-wrap justify-center items-center gap-3 sm:gap-4">
           <span className="flex items-center gap-1">
             <MdPhone className="text-blue-800" />
             +91 9582834877
@@ -115,8 +116,35 @@ export default function ContactPage() {
             </a>
           </span>
         </div>
-      </section>
 
+        {/* Social Icons */}
+        <div className="mt-5 flex justify-center items-center gap-5 text-xl">
+          <a
+            href="https://www.facebook.com/NLSyourstationerypal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-700 hover:text-blue-900 transition"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://www.instagram.com/soarwithpankh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-pink-600 hover:text-pink-800 transition"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="http://wa.me/+919582834877"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 hover:text-green-800 transition"
+          >
+            <FaWhatsapp />
+          </a>
+        </div>
+      </section>
 
       {/* Form Section */}
       <section className="bg-white py-10 px-4 font-mont">
@@ -126,66 +154,26 @@ export default function ContactPage() {
           </p>
 
           <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left text-sm">
-            {/* Name */}
-            <div className="col-span-1">
-              <label className="block text-gray-700 font-medium mb-1">Name *</label>
-              <input
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-300 text-sm"
-              />
-            </div>
+            {[ 
+              { label: 'Name *', name: 'name', required: true },
+              { label: 'Phone Number *', name: 'phoneNumber', required: true, type: 'tel' },
+              { label: 'Email', name: 'email', type: 'email' },
+              { label: 'Organisation Name', name: 'organisationName' },
+              { label: 'Location', name: 'location' },
+            ].map(({ label, name, type = 'text', required }) => (
+              <div className="col-span-1" key={name}>
+                <label className="block text-gray-700 font-medium mb-1">{label}</label>
+                <input
+                  name={name}
+                  value={formData[name as keyof typeof formData]}
+                  onChange={handleChange}
+                  type={type}
+                  required={required}
+                  className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:outline-none focus:ring-blue-300 text-sm"
+                />
+              </div>
+            ))}
 
-            {/* Phone */}
-            <div className="col-span-1">
-              <label className="block text-gray-700 font-medium mb-1">Phone Number *</label>
-              <input
-                name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                required
-                type="tel"
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-300 text-sm"
-              />
-            </div>
-
-            {/* Email */}
-            <div className="col-span-1">
-              <label className="block text-gray-700 font-medium mb-1">Email</label>
-              <input
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-300 text-sm"
-              />
-            </div>
-
-            {/* Org Name */}
-            <div className="col-span-1">
-              <label className="block text-gray-700 font-medium mb-1">Organisation Name</label>
-              <input
-                name="organisationName"
-                value={formData.organisationName}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-300 text-sm"
-              />
-            </div>
-
-            {/* Location */}
-            <div className="col-span-1">
-              <label className="block text-gray-700 font-medium mb-1">Location</label>
-              <input
-                name="location"
-                value={formData.location}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-300 text-sm"
-              />
-            </div>
-
-            {/* Query Type */}
             <div className="col-span-1">
               <label className="block text-gray-700 font-medium mb-1">Query Type *</label>
               <select
@@ -204,7 +192,6 @@ export default function ContactPage() {
               </select>
             </div>
 
-            {/* Message */}
             <div className="col-span-1 sm:col-span-2">
               <label className="block text-gray-700 font-medium mb-1">Message</label>
               <textarea
@@ -213,18 +200,20 @@ export default function ContactPage() {
                 onChange={handleChange}
                 rows={4}
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-300 text-sm"
-              ></textarea>
+              />
             </div>
 
-            {/* Submit */}
             <div className="col-span-1 sm:col-span-2 text-center mt-4">
               <button
                 type="submit"
                 disabled={loading}
-                className={`bg-blue-200 text-black font-semibold px-6 py-2 rounded transition duration-300 text-sm ${loading
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'hover:bg-blue-300'
-                  }`}
+                className={`text-sm font-semibold px-6 py-2 rounded transition duration-300 ${
+                  loading ? 'opacity-50 cursor-not-allowed' : `bg-[${primary}] hover:bg-[${accent1}]`
+                }`}
+                style={{
+                  backgroundColor: loading ? '#ccc' : primary,
+                  color: '#000',
+                }}
               >
                 {loading ? 'Submitting...' : 'Submit Query'}
               </button>

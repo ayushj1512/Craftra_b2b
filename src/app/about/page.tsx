@@ -7,126 +7,131 @@ import {
   GlobeAltIcon,
   Cog6ToothIcon,
   UserIcon,
-  LightBulbIcon,
-  EyeIcon
 } from '@heroicons/react/24/outline';
+import MissionVisionSection from '../components/MissionVisionSection';
+import { useTheme } from '@/context/ThemeContext'; // ✅ adjust path if needed
 
 export default function AboutPage() {
+  const { primary } = useTheme();
+
   return (
     <>
-      {/* Page Title & Breadcrumb */}
-      <section className="bg-blue-100 py-8 px-4 text-center font-mont">
-        <h1 className="text-xl md:text-2xl font-bold text-gray-800">About Us</h1>
-        <div className="mt-1 text-gray-600 text-sm">
+      {/* Hero Section */}
+      <section className="bg-blue-100 py-12 px-4 text-center font-mont">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800">About Us</h1>
+        <div className="mt-3 text-gray-600 text-sm">
           <span className="text-gray-800 font-medium">Home</span>
           <span className="mx-1">/</span>
           <span>About Us</span>
         </div>
       </section>
 
-      {/* Redefining Stationery Supply */}
-      <section className="py-12 bg-white px-4 font-mont">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-            Redefining Stationery Supply for Businesses
+      {/* Intro Section */}
+      <section className="py-16 bg-white px-4 font-mont">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-5">
+            Supplying Excellence — From Classrooms to Boardrooms
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm leading-relaxed mb-10">
-            NewLakshiStore is your trusted wholesale stationery provider. We offer a diverse range of stationery
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm leading-relaxed mb-12">
+            NewLakshmiStore is your trusted wholesale stationery provider. We offer a diverse range of stationery
             products tailored for offices, industries, schools, and institutions. With a focus on quality, affordability,
             and seamless service, we help streamline your procurement process and reduce operational load.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Our Mission',
-                icon: ClipboardDocumentCheckIcon,
-                text: 'To deliver seamless, cost-effective, and tailored stationery solutions through our online platform.',
-              },
-              {
-                title: 'Our Vision',
-                icon: EyeIcon,
-                text: 'To be the foremost provider of wholesale stationery, connecting businesses with quality and trust.',
-              },
-              {
-                title: 'Our Values',
-                icon: LightBulbIcon,
-                text: 'Integrity, innovation, customer-centricity, and reliability guide our every delivery and service.',
-              }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white shadow-sm rounded-lg p-4 border border-gray-100 text-left text-sm">
-                <div className="text-blue-300 mb-3">
-                  <item.icon className="w-8 h-8" />
-                </div>
-                <h3 className="text-base font-semibold text-gray-800 mb-1">{item.title}</h3>
-                <p className="text-gray-600">{item.text}</p>
-              </div>
-            ))}
-          </div>
+          {/* Mission & Vision */}
+          <MissionVisionSection />
         </div>
       </section>
 
-      {/* Why Get Wholesale Stationery Online */}
-      <section className="py-16 px-4 bg-gray-50 font-mont">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-            Why Get Wholesale Stationery Online?
+      {/* Why Buy Section */}
+      <section className="px-4 bg-gray-50 font-mont mb-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-5">
+            Why Buy Wholesale Stationery Online?
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm mb-10">
-            If you are a business in need of stationery stock, there are great benefits to using our supplier service.
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm mb-12">
+            If you're a business sourcing bulk stationery, here’s why NewLakshmiStore is your go-to supplier:
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
             {[
-              { icon: ClipboardDocumentCheckIcon, text: "Bulk online orders often come with exclusive discounts, minimizing procurement expenses." },
-              { icon: TruckIcon, text: "Our streamlined platform offers easy browsing, selection, and swift delivery." },
-              { icon: PencilSquareIcon, text: "We provide a vast array of stationery options — all in one place." },
-              { icon: GlobeAltIcon, text: "Our platform caters to businesses across locations with seamless access." },
-              { icon: Cog6ToothIcon, text: "Bulk orders reduce the need for storage, optimizing space and operations." },
-              { icon: UserIcon, text: "Online procurement reduces physical visits and saves time." },
+              {
+                icon: ClipboardDocumentCheckIcon,
+                text: 'Bulk online orders come with exclusive discounts, minimizing procurement expenses.',
+              },
+              {
+                icon: TruckIcon,
+                text: 'Our streamlined platform offers easy browsing, selection, and fast doorstep delivery.',
+              },
+              {
+                icon: PencilSquareIcon,
+                text: 'We offer a vast and evolving catalog of stationery essentials — all in one place.',
+              },
+              {
+                icon: GlobeAltIcon,
+                text: 'Pan-India reach: We serve businesses across every region with ease.',
+              },
+              {
+                icon: Cog6ToothIcon,
+                text: 'Bulk procurement reduces storage overhead, enhancing operational efficiency.',
+              },
+              {
+                icon: UserIcon,
+                text: 'Skip the market visits — order from your workspace and save time.',
+              },
             ].map((item, idx) => (
-              <div key={idx} className="bg-white shadow-sm rounded-lg p-4 border border-gray-100">
-                <item.icon className="w-8 h-8 text-blue-300 mb-3" />
-                <p className="text-gray-700">{item.text}</p>
+              <div
+                key={idx}
+                className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 hover:shadow-md transition-all"
+              >
+                <item.icon className="w-8 h-8 mb-3" style={{ color: primary }} />
+                <p className="text-gray-700 text-sm leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Stats & Final CTA */}
-      <section className="bg-gray-100 py-14 px-4 font-mont">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-10">
-            When It Comes to Stationery We Lead the Way
+      {/* Stats + CTA Section */}
+      <section className="bg-blue-50 py-16 px-4 font-mont">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-10">
+            When It Comes to Stationery, We Lead the Way
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10 text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {[
-              { stat: "1590+", label: "Wholesale Sellers" },
-              { stat: "96%", label: "Client Satisfaction" },
-              { stat: "2000+", label: "Stationery Products" },
-              { stat: "24/7", label: "Customer Support" },
+              { stat: '1590+', label: 'Wholesale Sellers' },
+              { stat: '96%', label: 'Client Satisfaction' },
+              { stat: '2000+', label: 'Products Catalogued' },
+              { stat: '24/7', label: 'Customer Support' },
             ].map((item, idx) => (
-              <div key={idx} className="bg-blue-100 text-black rounded-lg py-6 px-3 shadow-sm">
-                <h3 className="text-xl font-bold mb-1">{item.stat}</h3>
-                <p className="leading-snug">{item.label}</p>
+              <div
+                key={idx}
+                className="bg-white shadow-sm rounded-xl py-6 px-4 border border-gray-100"
+              >
+                <h3 className="text-2xl font-bold mb-1" style={{ color: primary }}>
+                  {item.stat}
+                </h3>
+                <p className="text-gray-700 text-sm">{item.label}</p>
               </div>
             ))}
           </div>
 
-          <div className="max-w-xl mx-auto text-sm px-2 sm:px-0">
+          <div className="max-w-xl mx-auto text-sm">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              You Know Our Story - Get To Know the Experience!
+              You Know Our Story — Now Experience Our Service
             </h3>
             <p className="text-gray-700 mb-4">
-              We simplify wholesale stationery purchase for businesses across India. Discover quality, reliability, and speed — whether you're selling or stocking up.
+              We simplify bulk stationery purchases for businesses across India. Discover unmatched quality,
+              reliability, and service whether you're buying for a small office or a nationwide chain.
             </p>
             <a
               href="/contact"
-              className="inline-block bg-black text-white text-sm font-medium py-2 px-5 rounded hover:bg-gray-800 transition"
+              className="inline-block text-white text-sm font-semibold py-2 px-6 rounded-full hover:opacity-90 transition duration-200"
+              style={{ backgroundColor: primary }}
             >
-              Contact Now &raquo;
+              Contact Us &raquo;
             </a>
           </div>
         </div>

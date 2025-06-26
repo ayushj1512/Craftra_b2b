@@ -2,32 +2,74 @@
 
 import HeroSection from "./components/HeroSection";
 import Link from "next/link";
+import { useTheme } from "@/context/ThemeContext";
 import { Truck, BadgeCheck } from "lucide-react";
 
 export default function Home() {
+  const { primary, accent1, accent2 } = useTheme();
+
   return (
-    <main className="font-mont">
+    <main className="font-mont text-gray-800">
       {/* Hero Banner */}
       <HeroSection />
 
-     
+      {/* Supplying Excellence Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: primary + "15" }}>
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+            Supplying Excellence – From Classrooms to Boardrooms
+          </h2>
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
+            At our core, we believe great service should have no boundaries. That’s why we cater to organizations of every
+            size and shape—from small startups and boutique firms to India’s top financial institutions. With clients like
+            <span className="font-semibold"> HDFC Bank, Federal Bank, Sun Operations</span>, as well as renowned schools,
+            event management firms, LLPs, SMEs, and a diverse mix of private enterprises, we’ve built a reputation for
+            reliability, speed, and flexibility.
+          </p>
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+            <span className="font-semibold">No minimum order. No delivery limits.</span> Just consistently dependable
+            service, tailored to your needs.
+          </p>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="bg-white mt-8 mb-16 px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-6">About Us</h2>
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-8">
+            NewLakshmiStore is your trusted wholesale stationery provider. We serve businesses of all sizes —
+            from startups to India’s leading institutions. Our platform offers a seamless and efficient B2B purchasing
+            experience for offices, schools, industries, and more. With over a decade of industry knowledge,
+            we deliver personalized service and high-quality products to help streamline procurement.
+          </p>
+          <Link
+            href="/about"
+            className="inline-block px-5 py-2 text-sm font-semibold rounded-full transition shadow hover:shadow-md"
+            style={{
+              backgroundColor: accent1,
+              color: "#fff",
+            }}
+          >
+            Read More &raquo;
+          </Link>
+        </div>
+      </section>
 
       {/* Why Choose Us */}
-      <section className="bg-blue-100 py-14 px-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: primary + "15" }}>
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Why Choose Us?</h2>
-          <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            At our core, we believe great service should have no boundaries. That’s why we cater to organizations of every
-            size and shape—from startups to India’s top financial institutions like 
-            <span className="font-semibold"> HDFC Bank, Federal Bank, Sun Operations</span>, and more.
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">Why Choose Us?</h2>
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
+            With roots dating back to the 1960s, we've built a legacy of trust through decades of dedicated service to schools and corporates alike. From daily stationery needs to full-spectrum printing solutions, our expertise spans generations and industries. No order too small, no client too big—we deliver with consistency, speed, and a deep understanding of what businesses truly need.
           </p>
-          <p className="text-gray-700 text-sm leading-relaxed mb-10">
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-10">
             <span className="font-semibold">No minimum order. No delivery limits.</span> Just consistently dependable
             service, tailored to your needs.
           </p>
 
           {/* Logos Grid */}
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 justify-center items-center">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
             {[
               { name: "Sun Operations", src: "/logos/karnataka.jpg" },
               { name: "HDFC Bank", src: "/logos/hdfc.jpg" },
@@ -57,79 +99,65 @@ export default function Home() {
       </section>
 
       {/* Categories */}
-      <section className="py-14 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Our Categories</h2>
-          <p className="text-gray-600 mb-10 text-sm">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Our Categories</h2>
+          <p className="text-sm sm:text-base text-gray-600 mb-10">
             Explore a curated range of stationery tailored for all sectors — at competitive wholesale rates.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
             {[
-              "Office Supplies",
-              "School Essentials",
-              "Art & Craft",
-              "Files & Folders",
-              "Writing Instruments",
-              "Bulk Orders",
-            ].map((category, index) => (
+              {
+                title: 'Corporate Stationery & Office Solutions',
+                desc: 'We deliver everything from A4 paper to full-scale office kits—trusted by top firms, banks, and LLPs for speed, scale, and zero-order-limit flexibility.',
+              },
+              {
+                title: 'Event & Marketing Essentials',
+                desc: 'Supporting event firms with high-quality printed materials, customized supplies, and creative stationery that adds polish to every campaign or activation.',
+              },
+              {
+                title: 'SMEs & Startup Support',
+                desc: 'No business is too small—our flexible service model helps new ventures and growing firms scale smoothly with reliable, cost-effective supply solutions.',
+              },
+              {
+                title: 'School Supplies & Printing Services',
+                desc: 'From daily classroom essentials to custom printing of question papers, registers, and forms—we’ve supported schools since the 1960s with dependable, tailored service.',
+              },
+              {
+                title: 'General & Competitive Exam Books',
+                desc: 'Your one-stop source for school textbooks and entrance exam prep—from foundational academics to university-level guides for aspiring achievers.',
+              },
+              {
+                title: 'Custom Printing & Branding Services',
+                desc: 'From letterheads to branded folders and institutional printing, we craft professional-grade materials that elevate your brand across every touchpoint.',
+              },
+            ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-100 rounded-lg shadow-md p-4 hover:shadow-lg transition-transform duration-300 hover:scale-[1.02] text-left"
+                className="bg-white border border-gray-100 rounded-lg shadow-sm p-5 hover:shadow-lg transition-transform duration-300 hover:scale-[1.02]"
               >
-                <h3 className="text-base font-semibold text-gray-800 mb-2">{category}</h3>
-                <p className="text-gray-600 text-sm">
-                  Shop bulk {category.toLowerCase()} with wholesale pricing and delivery.
-                </p>
+                <h3 className="text-base font-semibold text-gray-800 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Express Delivery Section */}
-      <section className="bg-gray-50 py-12 px-4 text-center">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {[
-            {
-              icon: <Truck className="mx-auto text-blue-300 w-8 h-8 mb-2" />,
-              title: "Express Delivery",
-              text: "Fast, reliable delivery that keeps your business running smoothly without delays.",
-            },
-            {
-              icon: <BadgeCheck className="mx-auto text-blue-300 w-8 h-8 mb-2" />,
-              title: "Quality Check",
-              text: "Every item meets strict durability and performance standards before reaching you.",
-            },
-            {
-              icon: (
-                <svg className="mx-auto text-blue-300 w-8 h-8 mb-2" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 14h.01M16 10h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
-                </svg>
-              ),
-              title: "Support",
-              text: "Friendly assistance to guide you through ordering, fulfillment, or queries.",
-            },
-          ].map((item, idx) => (
-            <div key={idx}>
-              {item.icon}
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-xs leading-relaxed px-2">{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-white py-14 px-4 text-center">
-        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">
+      {/* Final CTA */}
+      <section className="bg-white py-14 px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-xl sm:text-2xl font-bold mb-4">
           Your Gateway to Wholesale Stationery. Get Started Today!
         </h2>
-        <p className="text-gray-600 max-w-xl mx-auto text-sm mb-6">
+        <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto mb-6">
           Explore our extensive range of wholesale stationery tailored for every business. Unlock success with seamless
           service and quality products from Stationery Hut.
         </p>
         <Link href="/contact">
-          <button className="bg-blue-300 text-black px-4 py-2 rounded hover:bg-black hover:text-blue-300 transition font-semibold">
+          <button
+            className="px-5 py-2 text-sm font-semibold rounded-full hover:opacity-90 transition shadow-md hover:shadow-lg"
+            style={{ backgroundColor: accent2, color: "#fff" }}
+          >
             Contact Now &raquo;
           </button>
         </Link>
