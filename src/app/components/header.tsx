@@ -30,7 +30,7 @@ export default function Header() {
         {/* Logo + Brand Text */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/NLS_logo.png"
+            src="/favicon.png"
             alt="NLS Logo"
             width={40}
             height={40}

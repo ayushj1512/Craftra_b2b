@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/NLS_logo-removebg-preview.png" type="image/png" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
 
         {/* Google Analytics */}
         <Script
