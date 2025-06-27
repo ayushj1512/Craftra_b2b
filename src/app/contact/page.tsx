@@ -81,7 +81,7 @@ export default function ContactPage() {
 
       {/* Header Section */}
       <section className="bg-blue-100 py-8 px-4 text-center font-mont">
-        <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Contact Us</h1>
+        <h1 className="text-xl mt-10 sm:text-2xl font-bold text-gray-800">Contact Us</h1>
 
         <div className="mt-1 text-gray-600 text-sm">
           <span className="text-gray-800 font-medium">Home</span>

@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-blue-100 py-12 px-4 text-center font-mont">
+      <section className="bg-blue-100 py-14 px-4 text-center font-mont">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800">About Us</h1>
         <div className="mt-3 text-gray-600 text-sm">
           <span className="text-gray-800 font-medium">Home</span>
