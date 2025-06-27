@@ -32,7 +32,7 @@ export default function AboutPage() {
           <section className="bg-blue-50 py-16 px-4 font-mont">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-10">
-            When It Comes to stationary, We Lead the Way
+            When it comes to Stationary, We Lead the Way
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
