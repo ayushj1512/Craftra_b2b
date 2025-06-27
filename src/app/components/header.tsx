@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 
 export default function Header() {
-  const { primary } = useTheme();
+  useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
