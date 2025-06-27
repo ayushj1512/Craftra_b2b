@@ -87,6 +87,7 @@ export default function ContactPage() {
           <span className="text-gray-800 font-medium">Home</span>
           <span className="mx-1">/</span>
           <span>Contact Us</span>
+          <p>Get a quotation especially curated for you. Fill out the form below and we'll get back to you.</p>
         </div>
 
         {/* Contact Info */}

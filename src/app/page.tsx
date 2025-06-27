@@ -26,8 +26,8 @@ export default function Home() {
             reliability, speed, and flexibility.
           </p>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-            <span className="font-semibold">No minimum order. No delivery limits.</span> Just consistently dependable
-            service, tailored to your needs.
+            <span className="font-semibold">No minimum order. No delivery limits. Just consistently dependable service, tailored to your needs. Whether you're ordering a handful of essentials or sourcing supplies in bulk, we’ve got the scale and experience to deliver—on time, every time.</span>
+
           </p>
         </div>
       </section>
@@ -37,10 +37,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-semibold mb-6">About Us</h2>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-8">
-            NewLakshmiStore is your trusted wholesale stationery provider. We serve businesses of all sizes —
-            from startups to India’s leading institutions. Our platform offers a seamless and efficient B2B purchasing
-            experience for offices, schools, industries, and more. With over a decade of industry knowledge,
-            we deliver personalized service and high-quality products to help streamline procurement.
+            New Lakshmi Store is your trusted B2B partner. We serve businesses of all sizes — from startups to India’s leading institutions. We offer seamless and efficient purchasing experience for offices, schools, industries, and more. With over 6 decades of industry knowledge, we deliver personalized service and high-quality products to help streamline procurement.
           </p>
           <Link
             href="/about"
@@ -56,19 +53,20 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: primary + "15" }}>
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6">Why Choose Us?</h2>
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
-            With roots dating back to the 1960s, we've built a legacy of trust through decades of dedicated service to schools and corporates alike. From daily stationery needs to full-spectrum printing solutions, our expertise spans generations and industries. No order too small, no client too big—we deliver with consistency, speed, and a deep understanding of what businesses truly need.
-          </p>
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-10">
-            <span className="font-semibold">No minimum order. No delivery limits.</span> Just consistently dependable
-            service, tailored to your needs.
+      <section
+        className="py-16 px-4 sm:px-6 lg:px-8"
+        style={{ backgroundColor: primary + '15' }}
+      >
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            Why Choose Us?
+          </h2>
+          <p className="text-base text-justify sm:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-4">
+            With roots dating back to the 1960s, we've built a legacy of trust through decades of dedicated service to schools and corporations alike. From daily stationery needs to full-spectrum printing solutions, our expertise spans generations and industries. No order too small, no client too big—we deliver with consistency, speed, and a deep understanding of what businesses truly need. That’s why India’s leading institutions continue to choose us as their go-to B2B vendor.
           </p>
 
           {/* Logos Grid */}
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+          <div className="mt-10 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-6 justify-center items-center">
             {[
               { name: "Sun Operations", src: "/logos/karnataka.jpg" },
               { name: "HDFC Bank", src: "/logos/hdfc.jpg" },
@@ -88,21 +86,26 @@ export default function Home() {
             ].map((brand, index) => (
               <div
                 key={index}
-                className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full overflow-hidden shadow flex items-center justify-center"
+                className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full overflow-hidden shadow flex items-center justify-center mx-auto"
               >
-                <img src={brand.src} alt={brand.name} className="object-cover w-full h-full" />
+                <img
+                  src={brand.src}
+                  alt={brand.name}
+                  className="object-cover w-full h-full"
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
 
+
       {/* Categories */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Our Categories</h2>
           <p className="text-sm sm:text-base text-gray-600 mb-10">
-            Explore a curated range of stationery tailored for all sectors — at competitive wholesale rates.
+            Explore a curated range of stationery tailored for all sectors — at competitive  rates.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
             {[
@@ -146,10 +149,10 @@ export default function Home() {
       {/* Final CTA */}
       <section className="bg-white py-14 px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-xl sm:text-2xl font-bold mb-4">
-          Your Gateway to Wholesale Stationery. Get Started Today!
+          Your Gateway to  Stationery. Get Started Today!
         </h2>
         <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto mb-6">
-          Explore our extensive range of wholesale stationery tailored for every business. Unlock success with seamless
+          Explore our extensive range of  stationery tailored for every business. Unlock success with seamless
           service and quality products from Stationery Hut.
         </p>
         <Link href="/contact">
@@ -157,7 +160,7 @@ export default function Home() {
             className="px-5 py-2 text-sm font-semibold rounded-full hover:opacity-90 transition shadow-md hover:shadow-lg"
             style={{ backgroundColor: accent2, color: "#fff" }}
           >
-            Contact Now &raquo;
+            Reach out to us &raquo;
           </button>
         </Link>
       </section>
