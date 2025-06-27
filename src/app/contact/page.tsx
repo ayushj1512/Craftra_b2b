@@ -121,7 +121,7 @@ export default function ContactPage() {
         {/* Social Icons */}
         <div className="mt-5 flex justify-center items-center gap-5 text-xl">
           <a
-            href="https://www.facebook.com/NLSyourstationerypal"
+            href="https://www.facebook.com/NLSyourstationarypal"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-700 hover:text-blue-900 transition"

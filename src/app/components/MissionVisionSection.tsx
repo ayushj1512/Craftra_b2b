@@ -15,10 +15,10 @@ export default function MissionVisionSection() {
             Our Mission
           </p>
           <h3 className="text-2xl md:text-2xl font-bold text-gray-900">
-            Empowering India’s Institutions with Dependable Stationery & Printing
+            Empowering India’s Institutions with Dependable stationary & Printing
           </h3>
           <p className="text-base md:text-lg leading-relaxed">
-            We are committed to providing reliable, high-quality stationery and printing solutions that support the
+            We are committed to providing reliable, high-quality stationary and printing solutions that support the
             day-to-day operations of institutions and businesses across India. With roots stretching back to the
             1960s, our mission is to meet the evolving needs of clients—from schools seeking educational supplies
             to corporates requiring full-spectrum office essentials. We deliver excellence consistently—regardless
@@ -35,7 +35,7 @@ export default function MissionVisionSection() {
             Building a Future-Ready, Trusted B2B Supply Partner
           </h3>
           <p className="text-base md:text-lg leading-relaxed">
-            We envision being the most trusted and adaptable B2B partner for stationery and printing needs.
+            We envision being the most trusted and adaptable B2B partner for stationary and printing needs.
             Continuing a legacy of six decades, we aim to create a future where every client—from classrooms to
             boardrooms—receives seamless service, dependable products, and unwavering support. Rooted in experience
             and driven by innovation, we’re building a supply chain that scales with trust and quality.
@@ -55,8 +55,8 @@ export default function MissionVisionSection() {
           </h3>
           <p className="text-base md:text-lg leading-relaxed text-gray-800">
             Born from a passion for quality and service in the 1960s, we've grown from fulfilling daily school supply
-            needs to becoming a nationwide name in stationery and printing solutions. Our catalog spans everything
-            from office basics to specialty products—school stationery, competitive exam books, art & craft
+            needs to becoming a nationwide name in stationary and printing solutions. Our catalog spans everything
+            from office basics to specialty products—school stationary, competitive exam books, art & craft
             essentials, branded supplies, custom-printed materials, and more.
           </p>
           <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-800">

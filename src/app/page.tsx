@@ -62,7 +62,7 @@ export default function Home() {
             Why Choose Us?
           </h2>
           <p className="text-base text-justify sm:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-4">
-            With roots dating back to the 1960s, we've built a legacy of trust through decades of dedicated service to schools and corporations alike. From daily stationery needs to full-spectrum printing solutions, our expertise spans generations and industries. No order too small, no client too big—we deliver with consistency, speed, and a deep understanding of what businesses truly need. That’s why India’s leading institutions continue to choose us as their go-to B2B vendor.
+            With roots dating back to the 1960s, we've built a legacy of trust through decades of dedicated service to schools and corporations alike. From daily stationary needs to full-spectrum printing solutions, our expertise spans generations and industries. No order too small, no client too big—we deliver with consistency, speed, and a deep understanding of what businesses truly need. That’s why India’s leading institutions continue to choose us as their go-to B2B vendor.
           </p>
 
           {/* Logos Grid */}
@@ -105,17 +105,17 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Our Categories</h2>
           <p className="text-sm sm:text-base text-gray-600 mb-10">
-            Explore a curated range of stationery tailored for all sectors — at competitive  rates.
+            Explore a curated range of stationary tailored for all sectors — at competitive  rates.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
             {[
               {
-                title: 'Corporate Stationery & Office Solutions',
+                title: 'Corporate stationary & Office Solutions',
                 desc: 'We deliver everything from A4 paper to full-scale office kits—trusted by top firms, banks, and LLPs for speed, scale, and zero-order-limit flexibility.',
               },
               {
                 title: 'Event & Marketing Essentials',
-                desc: 'Supporting event firms with high-quality printed materials, customized supplies, and creative stationery that adds polish to every campaign or activation.',
+                desc: 'Supporting event firms with high-quality printed materials, customized supplies, and creative stationary that adds polish to every campaign or activation.',
               },
               {
                 title: 'SMEs & Startup Support',
@@ -152,7 +152,7 @@ export default function Home() {
           Your Gateway to  Stationary. Get Started Today!
         </h2>
         <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto mb-6">
-          Explore our extensive range of  stationery tailored for every business. Unlock success with seamless
+          Explore our extensive range of  stationary tailored for every business. Unlock success with seamless
           service and quality products from New Lakshmi Store.
         </p>
         <Link href="/contact">
