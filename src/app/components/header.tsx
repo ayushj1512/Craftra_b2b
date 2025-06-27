@@ -37,8 +37,10 @@ export default function Header() {
             priority
           />
           <h1
-            className="text-xl font-bold cursor-pointer"
-            style={{ color: primary }}
+            className={clsx(
+              'text-xl font-bold cursor-pointer transition-colors duration-300',
+              isScrolled ? 'text-gray-800' : 'text-white'
+            )}
           >
             <span className="block md:hidden">NLS</span>
             <span className="hidden md:block">New Lakshmi Store</span>
@@ -46,7 +48,12 @@ export default function Header() {
         </Link>
 
         {/* Navigation */}
-        <nav className="space-x-4 sm:space-x-6 text-sm sm:text-base font-medium">
+        <nav
+          className={clsx(
+            'space-x-4 sm:space-x-6 text-sm sm:text-base font-medium transition-colors duration-300',
+            isScrolled ? 'text-gray-800' : 'text-white'
+          )}
+        >
           <Link href="/" className="hover:text-blue-700 transition">Home</Link>
           <Link href="/about" className="hover:text-blue-700 transition">About</Link>
           <Link href="/contact" className="hover:text-blue-700 transition">Contact</Link>

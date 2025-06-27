@@ -3,7 +3,7 @@
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 
-// ✅ Autoplay Plugin (no pause on hover)
+// ✅ Autoplay Plugin
 function AutoplayPlugin(slider: any) {
   let timeout: any;
 
@@ -45,25 +45,23 @@ export default function HeroSection() {
   ];
 
   return (
-    <>
-      {/* Hero Image Slider */}
-      <div ref={sliderRef} className="keen-slider relative h-[70vh]">
-        {banners.map((src, index) => (
-          <div
-            key={index}
-            className="keen-slider__slide relative flex items-center justify-start"
-          >
-            <img
-              src={src}
-              alt={`Banner ${index + 1}`}
-              className="absolute w-full h-full object-cover top-0 left-0 z-0"
-            />
-            
-          </div>
-        ))}
-      </div>
+    <div ref={sliderRef} className="keen-slider relative h-[38vh] md:h-[60vh] lg:h-[80vh] overflow-hidden">
+      {banners.map((src, index) => (
+        <div
+          key={index}
+          className="keen-slider__slide relative flex items-center justify-center"
+        >
+          {/* Full Background Image */}
+          <img
+            src={src}
+            alt={`Banner ${index + 1}`}
+            className="absolute w-full h-full object-cover top-0 left-0 z-0"
+          />
 
-
-    </>
+          {/* ✅ Top-Only Transparent Overlay */}
+          <div className="absolute top-0 left-0 w-full h-[12%] bg-black/40 z-[75]" />
+        </div>
+      ))}
+    </div>
   );
 }
