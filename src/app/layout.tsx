@@ -16,9 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* Tailwind CDN and Dynamic Config */}
+        {/* Tailwind CDN and Custom Config */}
         <script src="https://cdn.tailwindcss.com" />
-
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -41,10 +40,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
+        {/* Montserrat Font */}
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
+
+        {/* Favicon */}
         <link rel="icon" href="/favicon.png" type="image/png" />
 
         {/* Google Analytics */}
@@ -76,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <Toaster position="top-center" />
 
-          {/* WhatsApp Button */}
+          {/* WhatsApp Chat Button */}
           <a
             href="https://wa.me/+919582834877"
             target="_blank"
