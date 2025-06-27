@@ -29,14 +29,7 @@ export default function AboutPage() {
             products tailored for offices, industries, schools, and institutions. With a focus on quality, affordability,
             and seamless service, we help streamline your procurement process and reduce operational load.
           </p>
-
-          {/* Mission & Vision */}
-          <MissionVisionSection />
-        </div>
-      </section>
-
-      {/* Stats + CTA Section */}
-      <section className="bg-blue-50 py-16 px-4 font-mont">
+          <section className="bg-blue-50 py-16 px-4 font-mont">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-10">
             When It Comes to stationary, We Lead the Way
@@ -79,6 +72,14 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+          {/* Mission & Vision */}
+          <MissionVisionSection />
+        </div>
+      </section>
+
+      {/* Stats + CTA Section */}
+      
     </>
   );
 }

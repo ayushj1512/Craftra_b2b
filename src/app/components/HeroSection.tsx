@@ -59,7 +59,7 @@ export default function HeroSection() {
           />
 
           {/* ✅ Top-Only Transparent Overlay */}
-          <div className="absolute top-0 left-0 w-full h-[12%] bg-black/40 z-[75]" />
+          <div className="absolute top-0 left-0 w-full h-[19%] md:h-[12%] bg-black/40 z-[75]" />
         </div>
       ))}
     </div>
