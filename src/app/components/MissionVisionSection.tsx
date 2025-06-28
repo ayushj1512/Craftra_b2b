@@ -1,6 +1,7 @@
 'use client';
 
 import { useTheme } from '@/context/ThemeContext'; // Adjust the path as needed
+import ReviewSection from './ReviewSection';
 
 export default function MissionVisionSection() {
   const { primary, accent2, accent3 } = useTheme();
@@ -25,6 +26,8 @@ export default function MissionVisionSection() {
             of order size or sector.
           </p>
         </div>
+
+        <ReviewSection />
 
         {/* Vision */}
         <div className="space-y-5">

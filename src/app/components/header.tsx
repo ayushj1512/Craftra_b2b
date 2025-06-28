@@ -35,7 +35,9 @@ export default function Header() {
             width={40}
             height={40}
             priority
+            style={{ height: 'auto' }} // Ensures correct aspect ratio
           />
+
           <h1
             className={clsx(
               'text-xl font-bold cursor-pointer transition-colors duration-300',
