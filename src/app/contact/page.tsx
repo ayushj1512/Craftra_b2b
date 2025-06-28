@@ -110,10 +110,10 @@ export default function ContactPage() {
           <span className="flex items-center gap-1">
             <MdEmail className="text-blue-800" />
             <a
-              href="mailto:newlakshmistore96@gmail.com"
+              href="mailto:New Lakshmi Store96@gmail.com"
               className="text-blue-800 hover:underline"
             >
-              newlakshmistore96@gmail.com
+              New Lakshmi Store96@gmail.com
             </a>
           </span>
         </div>

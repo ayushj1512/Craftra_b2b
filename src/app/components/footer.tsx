@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="flex flex-col justify-between h-full">
           <div className="w-full h-52 md:h-60 rounded-md overflow-hidden border border-gray-700 shadow-md">
             <iframe
-              title="NewLakshmiStore Location"
+              title="New Lakshmi Store Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.006250014534!2d77.1893324!3d28.6316037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d035c4168e3e5%3A0x843e29de38363093!2s4350%2F59%2C%20Padam%20Singh%20Rd%2C%20Block%2029%2C%20Block%201%2C%20Regar%20Pura%2C%20Karol%20Bagh%2C%20New%20Delhi%2C%20Delhi%20110005!5e0!3m2!1sen!2sin!4v1719310866436!5m2!1sen!2sin"
               width="100%"
               height="100%"
@@ -84,7 +84,7 @@ export default function Footer() {
       <div className="border-t border-gray-800 py-5 text-center text-gray-500 text-xs">
         <p>
           &copy; {new Date().getFullYear()}{' '}
-          <span style={{ color: accent1 }}>NewLakshmiStore</span>. All rights reserved.
+          <span style={{ color: accent1 }}>New Lakshmi Store</span>. All rights reserved.
         </p>
       </div>
     </footer>

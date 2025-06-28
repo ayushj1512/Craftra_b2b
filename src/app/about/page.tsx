@@ -25,7 +25,7 @@ export default function AboutPage() {
             Supplying Excellence — From Classrooms to Boardrooms
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm leading-relaxed mb-12">
-            NewLakshmiStore is your trusted stationery provider. We offer a diverse range of stationery
+            New Lakshmi Store is your trusted stationery provider. We offer a diverse range of stationery
             products tailored for offices, industries, schools, and institutions. With a focus on quality, affordability,
             and seamless service, we help streamline your procurement process and reduce operational load.
           </p>
