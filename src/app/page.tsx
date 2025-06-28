@@ -149,7 +149,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="bg-white py-14 px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-xl sm:text-2xl font-bold mb-4">
-          Your Gateway to  stationery. Get Started Today!
+          Your Gateway to  Stationery. Get Started Today!
         </h2>
         <p className="text-sm sm:text-base text-gray-600 max-w-xl mx-auto mb-6">
           Explore our extensive range of  stationery tailored for every business. Unlock success with seamless
