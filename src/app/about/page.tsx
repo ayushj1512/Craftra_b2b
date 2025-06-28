@@ -25,14 +25,14 @@ export default function AboutPage() {
             Supplying Excellence — From Classrooms to Boardrooms
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm leading-relaxed mb-12">
-            NewLakshmiStore is your trusted stationary provider. We offer a diverse range of stationary
+            NewLakshmiStore is your trusted stationery provider. We offer a diverse range of stationery
             products tailored for offices, industries, schools, and institutions. With a focus on quality, affordability,
             and seamless service, we help streamline your procurement process and reduce operational load.
           </p>
           <section className="bg-blue-50 py-16 px-4 font-mont">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-10">
-            When it comes to Stationary, We Lead the Way
+            When it comes to stationery, We Lead the Way
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -59,7 +59,7 @@ export default function AboutPage() {
               You Know Our Story — Now Experience Our Service
             </h3>
             <p className="text-gray-700 mb-4">
-              We simplify bulk stationary purchases for businesses across India. Discover unmatched quality,
+              We simplify bulk stationery purchases for businesses across India. Discover unmatched quality,
               reliability, and service whether you're buying for a small office or a nationwide chain.
             </p>
             <a

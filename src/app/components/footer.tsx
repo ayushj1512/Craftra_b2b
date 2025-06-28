@@ -17,7 +17,7 @@ export default function Footer() {
               New Lakshmi Store
             </h2>
             <p className="text-gray-400 leading-relaxed">
-              As work and education evolve, we continue to bridge the gap with dependable deliveries and competitive prices. From paper and pens to toners and tech accessories, shopping with us means getting exactly what you need—quickly, easily, and reliably. We’re here to make your stationary experience effortless, not overwhelming.
+              As work and education evolve, we continue to bridge the gap with dependable deliveries and competitive prices. From paper and pens to toners and tech accessories, shopping with us means getting exactly what you need—quickly, easily, and reliably. We’re here to make your stationery experience effortless, not overwhelming.
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Footer() {
 
             <div className="flex gap-4 text-xl">
               <a
-                href="https://www.facebook.com/NLSyourstationarypal"
+                href="https://www.facebook.com/NLSyourstationerypal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-500 transition"
