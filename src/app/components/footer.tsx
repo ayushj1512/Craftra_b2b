@@ -13,9 +13,16 @@ export default function Footer() {
         {/* Column 1: Company Info */}
         <div className="flex flex-col justify-between h-full">
           <div>
-            <h2 className="text-xl font-bold mb-4" style={{ color: primary }}>
-              New Lakshmi Store
-            </h2>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/favicon.png"
+                alt="NLS Logo"
+                className="w-10 h-10 object-contain rounded"
+              />
+              <h2 className="text-xl font-bold" style={{ color: primary }}>
+                New Lakshmi Store
+              </h2>
+            </div>
             <p className="text-gray-400 leading-relaxed">
               As work and education evolve, we continue to bridge the gap with dependable deliveries and competitive prices. From paper and pens to toners and tech accessories, shopping with us means getting exactly what you need—quickly, easily, and reliably. We’re here to make your stationery experience effortless, not overwhelming.
             </p>

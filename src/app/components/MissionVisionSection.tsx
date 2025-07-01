@@ -10,6 +10,8 @@ export default function MissionVisionSection() {
     <section className="w-full bg-white px-4 md:px-8 py-20">
       <div className="max-w-7xl mx-auto space-y-24 text-gray-700">
 
+        <ReviewSection />
+
         {/* Mission */}
         <div className="space-y-5">
           <p className="uppercase text-4xl md:text-4xl tracking-wide font-bold" style={{ color: primary }}>
@@ -27,7 +29,7 @@ export default function MissionVisionSection() {
           </p>
         </div>
 
-        <ReviewSection />
+
 
         {/* Vision */}
         <div className="space-y-5">
