@@ -17,7 +17,7 @@ export default function Footer() {
               <img
                 src="/favicon.png"
                 alt="NLS Logo"
-                className="w-10 h-10 object-contain rounded"
+                className="w-20 h-15 object-contain rounded"
               />
               <h2 className="text-xl font-bold" style={{ color: primary }}>
                 New Lakshmi Store

@@ -110,10 +110,10 @@ export default function ContactPage() {
           <span className="flex items-center gap-1">
             <MdEmail className="text-blue-800" />
             <a
-              href="mailto:New Lakshmi Store96@gmail.com"
+              href="mailto:newlakshmistore96@gmail.com"
               className="text-blue-800 hover:underline"
             >
-              New Lakshmi Store96@gmail.com
+              NewLakshmiStore96@gmail.com
             </a>
           </span>
         </div>
@@ -213,7 +213,7 @@ export default function ContactPage() {
                 }`}
                 style={{
                   backgroundColor: loading ? '#ccc' : primary,
-                  color: '#000',
+                  color: '#fff',
                 }}
               >
                 {loading ? 'Submitting...' : 'Submit Query'}
