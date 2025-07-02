@@ -157,7 +157,7 @@ export default function ReviewSection() {
         const container = scrollRef.current;
         if (!container) return;
 
-        const speed = 0.5;
+        const speed = 0.1;
         let frameId: number;
 
         const animate = () => {
